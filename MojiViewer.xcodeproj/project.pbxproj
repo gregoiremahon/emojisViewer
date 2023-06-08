@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		645C11012A31F88800FBA5EF /* MojiViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C11002A31F88800FBA5EF /* MojiViewerApp.swift */; };
-		645C11032A31F88800FBA5EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C11022A31F88800FBA5EF /* ContentView.swift */; };
 		645C11052A31F88B00FBA5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645C11042A31F88B00FBA5EF /* Assets.xcassets */; };
 		645C11082A31F88B00FBA5EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645C11072A31F88B00FBA5EF /* Preview Assets.xcassets */; };
+		645C11102A31F8C500FBA5EF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645C110F2A31F8C500FBA5EF /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		645C10FD2A31F88800FBA5EF /* MojiViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MojiViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645C11002A31F88800FBA5EF /* MojiViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MojiViewerApp.swift; sourceTree = "<group>"; };
-		645C11022A31F88800FBA5EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		645C11042A31F88B00FBA5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		645C11072A31F88B00FBA5EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		645C11092A31F88B00FBA5EF /* MojiViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MojiViewer.entitlements; sourceTree = "<group>"; };
+		645C110F2A31F8C500FBA5EF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				645C11002A31F88800FBA5EF /* MojiViewerApp.swift */,
-				645C11022A31F88800FBA5EF /* ContentView.swift */,
+				645C110F2A31F8C500FBA5EF /* SwiftUIView.swift */,
 				645C11042A31F88B00FBA5EF /* Assets.xcassets */,
 				645C11092A31F88B00FBA5EF /* MojiViewer.entitlements */,
 				645C11062A31F88B00FBA5EF /* Preview Content */,
@@ -139,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				645C11032A31F88800FBA5EF /* ContentView.swift in Sources */,
 				645C11012A31F88800FBA5EF /* MojiViewerApp.swift in Sources */,
+				645C11102A31F8C500FBA5EF /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +270,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MojiViewer/Preview Content\"";
+				DEVELOPMENT_TEAM = B4S7YD8878;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -280,8 +281,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregoiremahon.MojiViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -295,6 +300,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MojiViewer/Preview Content\"";
+				DEVELOPMENT_TEAM = B4S7YD8878;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -305,8 +311,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gregoiremahon.MojiViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
