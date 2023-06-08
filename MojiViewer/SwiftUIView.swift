@@ -40,6 +40,7 @@ struct ContentView: View {
         
         let emojiImage = emojiImage(for: emoji)
         sphere.firstMaterial?.diffuse.contents = emojiImage
+        sphere.firstMaterial?.isDoubleSided = true // apply texture on both sides
         
         node.geometry = sphere
         
@@ -51,16 +52,29 @@ struct ContentView: View {
     }
     
     func emojiImage(for emoji: String) -> UIImage {
-        let size = CGSize(width: 500, height: 500)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        UIColor.clear.set()
-        let rect = CGRect(origin: CGPoint(), size: size)
-        UIRectFill(CGRect(origin: CGPoint(), size: size))
-        (emoji as NSString).draw(in: rect, withAttributes: [.font: UIFont.systemFont(ofSize: 450)])
+        let emojiSize = CGSize(width: 300, height: 300)
+        let imageSize = CGSize(width: 500, height: 800)
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
+        
+        
+        let context = UIGraphicsGetCurrentContext()!
+        context.setFillColor(UIColor.systemYellow.cgColor) // backgroup color -> yellow
+        context.fill(CGRect(origin: CGPoint(), size: imageSize))
+        
+        let emojiRect = CGRect(
+            // centered
+            x: (imageSize.width - emojiSize.width) / 2,
+            y: (imageSize.height - emojiSize.height) / 2,
+            width: emojiSize.width,
+            height: emojiSize.height
+        )
+        (emoji as NSString).draw(in: emojiRect, withAttributes: [.font: UIFont.systemFont(ofSize: 250)])
+        
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image!
     }
+
 
 }
 
